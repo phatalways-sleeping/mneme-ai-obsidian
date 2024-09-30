@@ -1,5 +1,5 @@
+import MnemeAIPlugin from "main";
 import { App, PluginSettingTab, Setting } from "obsidian";
-import { MnemeAIPlugin } from "plugins/mnemeAIPlugin";
 import { SettingConfig } from "types/settings";
 
 export class MnemeAISettingsTab extends PluginSettingTab {
@@ -11,12 +11,22 @@ export class MnemeAISettingsTab extends PluginSettingTab {
 		this.plugin = plugin;
 		this.settings = [
 			{
-				name: "Secrets",
-				description: "Secrets for MnemeAI",
-				placeholder: "Enter your secrets here",
-				value: this.plugin.settings.secretKey,
+				name: "Host",
+				description: "The hostname of the MnemeAI server",
+				placeholder: "localhost",
+				value: this.plugin.settings.host,
 				onChange: async (value) => {
-					this.plugin.settings.secretKey = value;
+					this.plugin.settings.host = value;
+					await this.plugin.saveSettings();
+				},
+			},
+			{
+				name: "Port",
+				description: "The port of the MnemeAI server",
+				placeholder: "3000",
+				value: this.plugin.settings.port.toString(),
+				onChange: async (value) => {
+					this.plugin.settings.port = parseInt(value);
 					await this.plugin.saveSettings();
 				},
 			},
@@ -24,11 +34,11 @@ export class MnemeAISettingsTab extends PluginSettingTab {
 	}
 
 	display(): void {
-		let { containerEl } = this;
+		const { containerEl } = this;
 
 		containerEl.createEl("h2", { text: "MnemeAI Settings" });
 
-		let builder = new SettingBuilder(containerEl);
+		const builder = new SettingBuilder(containerEl);
 
 		this.settings.forEach((setting) => {
 			builder.create(setting);

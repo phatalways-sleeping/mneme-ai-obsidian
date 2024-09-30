@@ -1,7 +1,6 @@
 export interface MnemeAISettings {
-	secretKey: string;
-	username: string;
-	birthday: Date;
+	host: string;
+	port: number;
 }
 
 export interface SettingConfig {
@@ -13,7 +12,6 @@ export interface SettingConfig {
 }
 
 export const DEFAULT_SETTINGS: MnemeAISettings = {
-	secretKey: "my-little-secret",
-	username: "my-username",
-	birthday: new Date(),
+	host: "127.0.0.1",
+	port: 3000,
 };
