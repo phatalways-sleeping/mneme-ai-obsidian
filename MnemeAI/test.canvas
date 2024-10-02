@@ -1,0 +1,40 @@
+{
+	"width":1000,
+	"height":600,
+	"backgroundColor":"#f0f0f0",
+	"elements":[
+		{"type":"rectangle","x":50,"y":50,"width":500,"height":100,"fillColor":"#ff5733","strokeColor":"#000000","strokeWidth":2},
+		{"type":"circle","x":300,"y":150,"radius":50,"fillColor":"#33c3ff","strokeColor":"#000000","strokeWidth":2},
+		{"type":"line","startX":400,"startY":50,"endX":500,"endY":200,"strokeColor":"#000000","strokeWidth":3},
+		{"type":"text","x":100,"y":300,"text":"Hello, Canvas!","font":"20px Arial","fillColor":"#333333"},
+		{
+			"type":"polygon",
+			"points":[
+				{"x":600,"y":100},
+				{"x":650,"y":50},
+				{"x":700,"y":100},
+				{"x":675,"y":150},
+				{"x":625,"y":150}
+			],
+			"fillColor":"#75ff33",
+			"strokeColor":"#000000",
+			"strokeWidth":2
+		}
+	],
+	"nodes":[
+		{"id":"dc6cade7ac859025","type":"group","x":0,"y":-10880,"width":652,"height":256,"color":"4","label":"ASCAC"},
+		{"id":"cf93ea46312305a8","type":"group","x":0,"y":-10520,"width":652,"height":256,"color":"4","label":"ASCAC"},
+		{"id":"c75f2d4258465bfe","type":"text","text":"SACAC","x":20,"y":-10344,"width":250,"height":60},
+		{"id":"c6f0c2191b9647b8","type":"text","text":"SACAC","x":382,"y":-10374,"width":250,"height":60},
+		{"id":"6ee1670c657c9c59","type":"text","text":"ascacasc","x":145,"y":-10500,"width":250,"height":50},
+		{"id":"ffd20e86205c2fc6","type":"text","text":"ascacasc","x":145,"y":-10860,"width":250,"height":50},
+		{"id":"be6c3195b65e8213","type":"text","text":"SACAC","x":20,"y":-10704,"width":250,"height":60},
+		{"id":"c34c74e5a2447e7c","type":"text","text":"SACAC","x":382,"y":-10734,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"7316eef62cc78ade","fromNode":"ffd20e86205c2fc6","fromSide":"bottom","toNode":"be6c3195b65e8213","toSide":"top"},
+		{"id":"0f538b80773964b2","fromNode":"ffd20e86205c2fc6","fromSide":"bottom","toNode":"c34c74e5a2447e7c","toSide":"top"},
+		{"id":"04d78ab9e7bcaee5","fromNode":"6ee1670c657c9c59","fromSide":"bottom","toNode":"c75f2d4258465bfe","toSide":"top"},
+		{"id":"c3c02763d17eb184","fromNode":"6ee1670c657c9c59","fromSide":"bottom","toNode":"c6f0c2191b9647b8","toSide":"top"}
+	]
+}

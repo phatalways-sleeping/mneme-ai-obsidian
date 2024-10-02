@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "outDir": "dist",
+    "outDir": "MnemeAI/.obsidian/plugins/mneme-ai",
     "module": "ESNext",
     "target": "ESNext",
     "allowJs": false,
-    "types": ["puppeteer", "jest-environment-puppeteer", "expect-puppeteer"],
     "strict": true,
-    "removeComments": true,
+    "removeComments": false,
     "noImplicitAny": true,
     "moduleResolution": "node",
     "importHelpers": false,
@@ -17,6 +16,10 @@
     "lib": ["DOM", "ES5", "ES6", "ES7"]
   },
   "include": ["**/*.ts"],
+  "exclude": ["**/*.js"],
+  "watchOptions": {
+    "watchDirectory": "usefsevents"
+  },
   "buildOptions": {
     "incremental": true
   }
